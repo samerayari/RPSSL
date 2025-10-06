@@ -1,0 +1,47 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="gui.MainWindow"
+        Title="RPSSL – Først til 3"
+        Width="480"
+        Height="420"
+        Background="#20212B">
+
+    <Grid RowDefinitions="Auto,*,Auto" Margin="20">
+       
+        <Border Grid.Row="0" Background="#323346" CornerRadius="8" Padding="12" Margin="0,0,0,10">
+            <TextBlock Text="🪨 Rock · 📄 Paper · ✂️ Scissors · 🦎 Lizard · 🖖 Spock"
+                       Foreground="White" FontSize="22" FontWeight="Bold"
+                       TextAlignment="Center" TextWrapping="Wrap"/>
+        </Border>
+
+        
+        <StackPanel Grid.Row="1" Spacing="12" HorizontalAlignment="Center">
+            <Border Background="#2D2E3E" CornerRadius="6" Padding="10" Width="300">
+                <StackPanel Spacing="6">
+                    <TextBlock x:Name="TxtRound"   Text="Gør dit valg for at starte spillet!"
+                               Foreground="LightGray" FontSize="15" TextAlignment="Center"/>
+                    <TextBlock x:Name="TxtChoices" Text="Du: - | Agent: -" Foreground="White"
+                               FontSize="14" TextAlignment="Center"/>
+                    <TextBlock x:Name="TxtScore"   Text="Stillingen — Du: 0 | Agent: 0"
+                               Foreground="LightGreen" FontWeight="SemiBold" FontSize="15"
+                               TextAlignment="Center"/>
+                </StackPanel>
+            </Border>
+
+            <UniformGrid Rows="2" Columns="3" HorizontalAlignment="Center" Margin="0,10,0,0">
+                <Button x:Name="BtnRock"     Content="🪨 Rock"     Margin="4" Background="#3C3D4F"/>
+                <Button x:Name="BtnPaper"    Content="📄 Paper"    Margin="4" Background="#3C3D4F"/>
+                <Button x:Name="BtnScissors" Content="✂️ Scissors" Margin="4" Background="#3C3D4F"/>
+                <Button x:Name="BtnLizard"   Content="🦎 Lizard"   Margin="4" Background="#3C3D4F"/>
+                <Button x:Name="BtnSpock"    Content="🖖 Spock"    Margin="4" Background="#3C3D4F"/>
+            </UniformGrid>
+        </StackPanel>
+
+        
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center"
+                    Spacing="20" Margin="0,20,0,0">
+            <Button x:Name="BtnReset" Content="🔁 Nulstil" Width="120" Background="#505070"/>
+            <Button x:Name="BtnClose" Content="❌ Luk"    Width="120" Background="#703C3C"/>
+        </StackPanel>
+    </Grid>
+</Window>
